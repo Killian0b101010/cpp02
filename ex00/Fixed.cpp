@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 01:57:11 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/19 05:16:07 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:01:20 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ Fixed::Fixed(const Fixed &fixed) {
 
 Fixed::~Fixed() { std::cout << "Destructor called" << std::endl; }
 
-int Fixed::getRawBits() const { return (this->_fixedVal); }
+int Fixed::getRawBits() const {
+  std::cout << "getRawBits member function called" << std::endl;
+  return (this->_fixedVal);
+}
 
 Fixed &Fixed::operator=(const Fixed &other) {
 
