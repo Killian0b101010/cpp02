@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:12:20 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/20 04:54:28 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/21 02:06:58 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class Fixed {
 private:
-  int _fixedVal;
+  u_int32_t _fixedVal;
   int const static bits = 8;
 
 public:
@@ -26,10 +26,10 @@ public:
   Fixed(float number);
 
   float toFloat(void) const;
-  int toInt(void) const;
+  int32_t toInt(void) const;
   Fixed &operator=(const Fixed &other);
   int getRawBits(void) const;
-  void setRawBits(int const raw);
+  void setRawBits(int32_t const raw);
   ~Fixed();
 };
 
