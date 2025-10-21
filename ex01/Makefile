@@ -15,10 +15,10 @@ $(NAME): $(OBJ)
 				$(CC) $(CXXFLAGS) -c $< -o $@ 
 
 clean : 
-				$(RM) $(OBJ) $(DEP)
+				$(RM) $(OBJ) $(DEP) a.out
 
 fclean : clean 
-				$(RM) $(NAME)
+				$(RM) $(NAME) a.out
 
 re : fclean all
 
